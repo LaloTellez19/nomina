@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>821836411645-tkdv4bdlpahqp8i0nhklcuj4dum97e5i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.821836411645-tkdv4bdlpahqp8i0nhklcuj4dum97e5i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBci8X-cE7J3rf-0_tx5S3s9lYMCAn0qqk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>821836411645</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nomina.linko.Adelanto-de-Nomina</string>
+	<key>PROJECT_ID</key>
+	<string>nomina-test-a7c0c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nomina-test-a7c0c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:821836411645:ios:35253f375e2a6721ca8494</string>
+</dict>
+</plist>

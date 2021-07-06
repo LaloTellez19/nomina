@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="KGk-i7-Jjw" customClass="StoryTableViewCell" customModule="Adelanto_de_Nomina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Bf-3OJ">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="106"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONCEPTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o9-Gv-GGV">
+                                <rect key="frame" x="20" y="10" width="294" height="24"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00 MXN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-3I-Iy3">
+                                <rect key="frame" x="20" y="39" width="177" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 MAY0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rt-oZ-1I0">
+                                <rect key="frame" x="20" y="64" width="177" height="16.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="eVp-Zo-Kx0">
+                                <rect key="frame" x="207" y="39" width="117" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="FGr-Sm-yfB"/>
+                                    <constraint firstAttribute="width" constant="117" id="r8d-qb-msg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="ColorBack"/>
+                        <constraints>
+                            <constraint firstItem="eVp-Zo-Kx0" firstAttribute="leading" secondItem="GVb-3I-Iy3" secondAttribute="trailing" constant="10" id="0Ck-vm-ZDJ"/>
+                            <constraint firstItem="3Rt-oZ-1I0" firstAttribute="leading" secondItem="xbG-Bf-3OJ" secondAttribute="leading" constant="20" id="27g-AO-fEx"/>
+                            <constraint firstAttribute="trailing" secondItem="6o9-Gv-GGV" secondAttribute="trailing" constant="20" id="4yv-KU-ycy"/>
+                            <constraint firstAttribute="height" constant="106" id="6F5-hN-Thc"/>
+                            <constraint firstItem="GVb-3I-Iy3" firstAttribute="top" secondItem="6o9-Gv-GGV" secondAttribute="bottom" constant="5" id="BM5-9m-79U"/>
+                            <constraint firstItem="eVp-Zo-Kx0" firstAttribute="leading" secondItem="3Rt-oZ-1I0" secondAttribute="trailing" constant="10" id="IN3-6s-NbK"/>
+                            <constraint firstItem="6o9-Gv-GGV" firstAttribute="leading" secondItem="xbG-Bf-3OJ" secondAttribute="leading" constant="20" id="PQc-L1-n72"/>
+                            <constraint firstItem="GVb-3I-Iy3" firstAttribute="leading" secondItem="xbG-Bf-3OJ" secondAttribute="leading" constant="20" id="PzV-qA-tX9"/>
+                            <constraint firstItem="GVb-3I-Iy3" firstAttribute="top" secondItem="6o9-Gv-GGV" secondAttribute="bottom" constant="5" id="ceN-pY-Ieh"/>
+                            <constraint firstItem="eVp-Zo-Kx0" firstAttribute="top" secondItem="6o9-Gv-GGV" secondAttribute="bottom" constant="5" id="hyo-3K-EWS"/>
+                            <constraint firstItem="6o9-Gv-GGV" firstAttribute="top" secondItem="xbG-Bf-3OJ" secondAttribute="top" constant="10" id="lCT-wT-FcO"/>
+                            <constraint firstItem="3Rt-oZ-1I0" firstAttribute="top" secondItem="GVb-3I-Iy3" secondAttribute="bottom" constant="5" id="q3c-Tp-0Am"/>
+                            <constraint firstAttribute="trailing" secondItem="eVp-Zo-Kx0" secondAttribute="trailing" constant="10" id="wZs-dt-orH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xbG-Bf-3OJ" secondAttribute="bottom" id="Zye-b8-SWU"/>
+                    <constraint firstAttribute="trailing" secondItem="xbG-Bf-3OJ" secondAttribute="trailing" id="lbR-1v-lxF"/>
+                    <constraint firstItem="xbG-Bf-3OJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="s7S-Ur-hBH"/>
+                    <constraint firstItem="xbG-Bf-3OJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vsH-ye-RIQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="conceptoLabel" destination="6o9-Gv-GGV" id="K7I-z3-tPJ"/>
+                <outlet property="fechaLabel" destination="3Rt-oZ-1I0" id="QTb-3j-Blv"/>
+                <outlet property="medioPagoImage" destination="eVp-Zo-Kx0" id="UzG-ad-V4a"/>
+                <outlet property="montoLabel" destination="GVb-3I-Iy3" id="u1g-qD-PXf"/>
+            </connections>
+            <point key="canvasLocation" x="184.05797101449278" y="127.23214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="visa" width="1280" height="720"/>
+        <namedColor name="ColorBack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.40799999237060547" green="0.67500001192092896" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

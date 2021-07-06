@@ -1,0 +1,58 @@
+[
+  {
+    "concepto": "COLEGIATURA PRIMARIA",
+    "monto": 1600.00,
+    "fecha": "21 MAY",
+    "metodo": "card",
+    "imageConcept": "COLEGIATURA"
+  },
+  {
+    "concepto": "NETFLIX",
+    "monto": 150.00,
+    "fecha": "13 MAY",
+    "metodo": "visa",
+    "imageConcept": "NETFLIX"
+  },
+  {
+    "concepto": "SPOTIFY",
+    "monto": 99.00,
+    "fecha": "10 APRIL",
+    "metodo": "efectivo",
+    "imageConcept": "SPOTIFY"
+  },
+  {
+    "concepto": "RAPPI",
+    "monto": 600.00,
+    "fecha": "20 JULY",
+    "metodo": "visa",
+    "imageConcept": "RAPPI"
+  },
+  {
+    "concepto": "RESTAURANTE PESCADIN",
+    "monto": 3510.00,
+    "fecha": "03 MARCH",
+    "metodo": "efectivo",
+    "imageConcept": "RESTAURANTE"
+  },
+  {
+    "concepto": "COLEGIATURA SECUNDARIA",
+    "monto": 5600.00,
+    "fecha": "01 FEBRUARY",
+    "metodo": "card",
+    "imageConcept": "COLEGIATURA"
+  },
+  {
+    "concepto": "CINEPOLIS VIP",
+    "monto": 450.00,
+    "fecha": "30 DECEMBER",
+    "metodo": "visa",
+    "imageConcept": "CINEPOLIS"
+  },
+  {
+    "concepto": "XBOX GAME PASS",
+    "monto": 700.00,
+    "fecha": "28 JANUARY",
+    "metodo": "card",
+    "imageConcept": "XBOX"
+  }
+]

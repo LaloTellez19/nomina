@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAp-V5-a16">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Tab View Controller-->
+        <scene sceneID="fRf-CQ-rl4">
+            <objects>
+                <tabBarController storyboardIdentifier="Home" id="hAp-V5-a16" customClass="HomeTabViewController" customModule="Adelanto_de_Nomina" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uCM-mP-7rz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="tabBar" destination="uCM-mP-7rz" id="M9s-Ch-IX5"/>
+                        <segue destination="CUb-Rm-oJy" kind="relationship" relationship="viewControllers" id="6gc-ir-4gm"/>
+                        <segue destination="VBt-Bx-hEn" kind="relationship" relationship="viewControllers" id="fBy-Dz-JPj"/>
+                        <segue destination="cPR-mv-LnM" kind="relationship" relationship="viewControllers" id="x8p-wX-F0M"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UH-y6-tNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="-273"/>
+        </scene>
+        <!--HISTORY-->
+        <scene sceneID="jEM-nJ-y9K">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="CUb-Rm-oJy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="HISTORY" image="calendar" catalog="system" id="pvJ-7b-S7e"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yk6-TC-J5S">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Xr-h6-wBa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="FCN-oh-S7s" kind="relationship" relationship="rootViewController" id="Nf0-8K-GeY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikw-iQ-1U8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1564" y="471"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="P3a-zG-a1t">
+            <objects>
+                <viewController id="FCN-oh-S7s" customClass="HistoryViewController" customModule="Adelanto_de_Nomina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBV-tw-HS9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPW-W1-gM3">
+                                <rect key="frame" x="20" y="64" width="350" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="PAYMENT"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="O75-bC-ICs">
+                                <rect key="frame" x="0.0" y="194" width="390" height="567"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="abE-9c-5ZD">
+                                <rect key="frame" x="5" y="97" width="380" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="SEARCH"/>
+                                </userDefinedRuntimeAttributes>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Dn-LW-GoM">
+                                <rect key="frame" x="10" y="153" width="370" height="32"/>
+                                <segments>
+                                    <segment title="Concepto"/>
+                                    <segment title="Monto"/>
+                                    <segment title="Metodo De Pago"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="PAYMENT"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sortSegmentAction:" destination="FCN-oh-S7s" eventType="valueChanged" id="nRf-Dc-iH7"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hV4-YR-DS4"/>
+                        <color key="backgroundColor" name="ColorBack"/>
+                        <constraints>
+                            <constraint firstItem="IPW-W1-gM3" firstAttribute="leading" secondItem="LBV-tw-HS9" secondAttribute="leading" constant="20" id="0TR-4J-GwU"/>
+                            <constraint firstItem="abE-9c-5ZD" firstAttribute="top" secondItem="IPW-W1-gM3" secondAttribute="bottom" id="186-al-HNo"/>
+                            <constraint firstItem="O75-bC-ICs" firstAttribute="top" secondItem="7Dn-LW-GoM" secondAttribute="bottom" constant="10" id="82H-Kq-RA3"/>
+                            <constraint firstItem="hV4-YR-DS4" firstAttribute="bottom" secondItem="O75-bC-ICs" secondAttribute="bottom" id="Gbu-0a-jUF"/>
+                            <constraint firstItem="O75-bC-ICs" firstAttribute="leading" secondItem="hV4-YR-DS4" secondAttribute="leading" id="ILW-kk-yBh"/>
+                            <constraint firstItem="7Dn-LW-GoM" firstAttribute="top" secondItem="abE-9c-5ZD" secondAttribute="bottom" constant="5" id="PBj-Hc-j8s"/>
+                            <constraint firstItem="7Dn-LW-GoM" firstAttribute="leading" secondItem="hV4-YR-DS4" secondAttribute="leading" constant="10" id="VUx-vw-9T3"/>
+                            <constraint firstItem="hV4-YR-DS4" firstAttribute="trailing" secondItem="O75-bC-ICs" secondAttribute="trailing" id="f0n-uk-Xja"/>
+                            <constraint firstItem="abE-9c-5ZD" firstAttribute="leading" secondItem="hV4-YR-DS4" secondAttribute="leading" constant="5" id="h7i-vb-W7E"/>
+                            <constraint firstItem="hV4-YR-DS4" firstAttribute="trailing" secondItem="7Dn-LW-GoM" secondAttribute="trailing" constant="10" id="lv6-cG-UzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="abE-9c-5ZD" secondAttribute="trailing" constant="5" id="pus-S8-biG"/>
+                            <constraint firstItem="hV4-YR-DS4" firstAttribute="trailing" secondItem="IPW-W1-gM3" secondAttribute="trailing" constant="20" id="qBb-8D-RyP"/>
+                            <constraint firstItem="IPW-W1-gM3" firstAttribute="top" secondItem="hV4-YR-DS4" secondAttribute="top" constant="20" id="xLf-hI-Wh1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="onD-EO-pcd"/>
+                    <connections>
+                        <outlet property="paymentTable" destination="O75-bC-ICs" id="drv-l9-V2P"/>
+                        <outlet property="searchBar" destination="abE-9c-5ZD" id="vBv-4o-MD4"/>
+                        <outlet property="segmentSort" destination="7Dn-LW-GoM" id="uNy-ez-oFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJl-rZ-LeP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1566.1538461538462" y="1198.5781990521327"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="Wu8-xS-6DK">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="VBt-Bx-hEn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="HOME" image="homekit" catalog="system" id="pmw-Ch-zaA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N7J-QV-V3v">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TKi-Gd-lbc" kind="relationship" relationship="rootViewController" id="X7x-eJ-4Nu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObA-QE-Qdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="471"/>
+        </scene>
+        <!--REQUEST-->
+        <scene sceneID="6o0-Tv-dCC">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="cPR-mv-LnM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="REQUEST" image="pencil" catalog="system" id="Yv7-gt-37H"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tve-NW-YEm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8GT-Pq-LU8" kind="relationship" relationship="rootViewController" id="bDY-UK-rsm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3t-uM-lHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="471"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="CNp-HK-lXa">
+            <objects>
+                <viewController id="TKi-Gd-lbc" customClass="HomeViewController" customModule="Adelanto_de_Nomina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdX-oL-AEe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBk-dS-rzW">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QgY-Hw-YaF">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="720"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIGUEL EDUARDO VALDEZ TELLEZ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDe-eT-jL8">
+                                                <rect key="frame" x="20" y="263" width="350" height="27.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W61-Lw-Q8S">
+                                                <rect key="frame" x="40" y="225" width="310" height="33"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="WELCOME"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enz-Nj-Ao3">
+                                                <rect key="frame" x="40" y="320.33333333333331" width="296" height="33"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="BALANCE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoH-Uz-CaI">
+                                                <rect key="frame" x="40.000000000000007" y="363.33333333333331" width="101.66666666666669" height="28"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVm-0w-feC">
+                                                <rect key="frame" x="69" y="631.33333333333337" width="60.333333333333343" height="28"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="ACTIVE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MXN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-CG-szX">
+                                                <rect key="frame" x="146.66666666666666" y="363.33333333333331" width="55" height="27.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-S5-kCR">
+                                                <rect key="frame" x="40" y="411.33333333333331" width="296" height="33"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="AMOUNT"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H79-uU-5Va">
+                                                <rect key="frame" x="40.000000000000007" y="454.33333333333331" width="87.666666666666686" height="28"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MXN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-Qj-C0f">
+                                                <rect key="frame" x="132.66666666666666" y="454.33333333333331" width="55" height="27.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-cn-rKZ">
+                                                <rect key="frame" x="40" y="593.33333333333337" width="296" height="33"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="STATUS"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-pG-slW">
+                                                <rect key="frame" x="40" y="633.33333333333337" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="1Ju-7x-Y9I"/>
+                                                    <constraint firstAttribute="width" constant="24" id="EiR-cW-tMc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="BTp-4m-wr4">
+                                                <rect key="frame" x="95" y="10" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="5jg-TZ-Gc3"/>
+                                                    <constraint firstAttribute="width" constant="200" id="6vV-vw-dlK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ty-zg-BGy">
+                                                <rect key="frame" x="40" y="502.33333333333337" width="296" height="33"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="PAYDAY"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 de Enero 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-yS-a9I">
+                                                <rect key="frame" x="40" y="545.33333333333337" width="296" height="28"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-4k-z8x">
+                                                <rect key="frame" x="348.66666666666669" y="10" width="21.333333333333314" height="22"/>
+                                                <state key="normal" image="logout"/>
+                                                <connections>
+                                                    <action selector="logoutButton:" destination="TKi-Gd-lbc" eventType="touchUpInside" id="heV-Aq-0tE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eDe-eT-jL8" secondAttribute="trailing" constant="20" id="46V-YU-WET"/>
+                                            <constraint firstItem="aoH-Uz-CaI" firstAttribute="top" secondItem="enz-Nj-Ao3" secondAttribute="bottom" constant="10" id="5ec-EU-nbi"/>
+                                            <constraint firstItem="BTp-4m-wr4" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="95" id="6GE-lV-Zwc"/>
+                                            <constraint firstAttribute="height" constant="720" id="89t-TD-sub"/>
+                                            <constraint firstAttribute="trailing" secondItem="3ty-zg-BGy" secondAttribute="trailing" constant="54" id="8kw-7r-Y40"/>
+                                            <constraint firstAttribute="trailing" secondItem="W61-Lw-Q8S" secondAttribute="trailing" constant="40" id="BHk-as-okQ"/>
+                                            <constraint firstItem="2TG-Qj-C0f" firstAttribute="leading" secondItem="H79-uU-5Va" secondAttribute="trailing" constant="5" id="COR-5K-agg"/>
+                                            <constraint firstItem="3ty-zg-BGy" firstAttribute="top" secondItem="H79-uU-5Va" secondAttribute="bottom" constant="20" id="CcL-Rg-rLS"/>
+                                            <constraint firstItem="W61-Lw-Q8S" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="Cx4-UH-urS"/>
+                                            <constraint firstItem="ggQ-pG-slW" firstAttribute="top" secondItem="ZBp-cn-rKZ" secondAttribute="bottom" constant="7" id="DKR-WT-2gy"/>
+                                            <constraint firstItem="BVm-0w-feC" firstAttribute="leading" secondItem="ggQ-pG-slW" secondAttribute="trailing" constant="5" id="JJa-y5-Ly2"/>
+                                            <constraint firstItem="eDe-eT-jL8" firstAttribute="top" secondItem="W61-Lw-Q8S" secondAttribute="bottom" constant="5" id="KAb-av-YJS"/>
+                                            <constraint firstItem="BTp-4m-wr4" firstAttribute="top" secondItem="QgY-Hw-YaF" secondAttribute="top" constant="10" id="KJL-2Q-EbC"/>
+                                            <constraint firstItem="TMd-yS-a9I" firstAttribute="top" secondItem="3ty-zg-BGy" secondAttribute="bottom" constant="10" id="LPf-F7-Bto"/>
+                                            <constraint firstItem="NEI-S5-kCR" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="LhR-oE-y0d"/>
+                                            <constraint firstItem="W61-Lw-Q8S" firstAttribute="top" secondItem="BTp-4m-wr4" secondAttribute="bottom" constant="15" id="RoG-Qd-83s"/>
+                                            <constraint firstItem="TMd-yS-a9I" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="SwT-3V-f4Q"/>
+                                            <constraint firstItem="ZBp-cn-rKZ" firstAttribute="top" secondItem="TMd-yS-a9I" secondAttribute="bottom" constant="20" id="TzK-yt-aWt"/>
+                                            <constraint firstItem="VuG-CG-szX" firstAttribute="leading" secondItem="aoH-Uz-CaI" secondAttribute="trailing" constant="5" id="Wjq-fl-wPF"/>
+                                            <constraint firstItem="H79-uU-5Va" firstAttribute="top" secondItem="NEI-S5-kCR" secondAttribute="bottom" constant="10" id="XrV-w6-mmg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZBp-cn-rKZ" secondAttribute="trailing" constant="54" id="aWf-54-BDu"/>
+                                            <constraint firstAttribute="trailing" secondItem="NEI-S5-kCR" secondAttribute="trailing" constant="54" id="auj-HI-pGl"/>
+                                            <constraint firstItem="5oE-4k-z8x" firstAttribute="top" secondItem="QgY-Hw-YaF" secondAttribute="top" constant="10" id="c7K-SQ-alV"/>
+                                            <constraint firstItem="3ty-zg-BGy" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="cOh-Jz-Wxu"/>
+                                            <constraint firstItem="eDe-eT-jL8" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="20" id="d4D-87-mwO"/>
+                                            <constraint firstItem="ZBp-cn-rKZ" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="ds7-bq-WGG"/>
+                                            <constraint firstAttribute="trailing" secondItem="enz-Nj-Ao3" secondAttribute="trailing" constant="54" id="f1i-J2-73d"/>
+                                            <constraint firstItem="aoH-Uz-CaI" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="ieu-4i-I7b"/>
+                                            <constraint firstItem="enz-Nj-Ao3" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="ktQ-4r-Vak"/>
+                                            <constraint firstAttribute="trailing" secondItem="TMd-yS-a9I" secondAttribute="trailing" constant="54" id="ns8-Vy-fpE"/>
+                                            <constraint firstItem="H79-uU-5Va" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="osc-6w-hnd"/>
+                                            <constraint firstItem="2TG-Qj-C0f" firstAttribute="top" secondItem="NEI-S5-kCR" secondAttribute="bottom" constant="10" id="qBj-r0-Tap"/>
+                                            <constraint firstItem="BVm-0w-feC" firstAttribute="top" secondItem="ZBp-cn-rKZ" secondAttribute="bottom" constant="5" id="trH-i8-7cD"/>
+                                            <constraint firstItem="NEI-S5-kCR" firstAttribute="top" secondItem="aoH-Uz-CaI" secondAttribute="bottom" constant="20" id="uRy-DP-3iL"/>
+                                            <constraint firstAttribute="trailing" secondItem="5oE-4k-z8x" secondAttribute="trailing" constant="20" id="vTS-TH-3CF"/>
+                                            <constraint firstItem="VuG-CG-szX" firstAttribute="top" secondItem="enz-Nj-Ao3" secondAttribute="bottom" constant="10" id="wkT-wu-Clz"/>
+                                            <constraint firstItem="enz-Nj-Ao3" firstAttribute="top" secondItem="eDe-eT-jL8" secondAttribute="bottom" constant="30" id="xHf-kb-0NO"/>
+                                            <constraint firstItem="ggQ-pG-slW" firstAttribute="leading" secondItem="QgY-Hw-YaF" secondAttribute="leading" constant="40" id="yLr-9w-lv3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QgY-Hw-YaF" firstAttribute="centerX" secondItem="TBk-dS-rzW" secondAttribute="centerX" id="4z1-2b-ajP"/>
+                                    <constraint firstAttribute="bottom" secondItem="QgY-Hw-YaF" secondAttribute="bottom" constant="-14" id="Eas-ao-zmW"/>
+                                    <constraint firstAttribute="trailing" secondItem="QgY-Hw-YaF" secondAttribute="trailing" id="fon-pz-cFW"/>
+                                    <constraint firstItem="QgY-Hw-YaF" firstAttribute="top" secondItem="TBk-dS-rzW" secondAttribute="top" id="ifK-Yl-p8a"/>
+                                    <constraint firstItem="QgY-Hw-YaF" firstAttribute="width" secondItem="TBk-dS-rzW" secondAttribute="width" id="pER-bY-4OH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CKk-y3-xF6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TBk-dS-rzW" firstAttribute="leading" secondItem="CKk-y3-xF6" secondAttribute="leading" id="C1w-sA-ir2"/>
+                            <constraint firstItem="TBk-dS-rzW" firstAttribute="trailing" secondItem="CKk-y3-xF6" secondAttribute="trailing" id="K5b-en-YpU"/>
+                            <constraint firstItem="TBk-dS-rzW" firstAttribute="top" secondItem="CKk-y3-xF6" secondAttribute="top" id="RXi-Ee-kH0"/>
+                            <constraint firstItem="TBk-dS-rzW" firstAttribute="bottom" secondItem="CKk-y3-xF6" secondAttribute="bottom" id="v0P-rZ-dRb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="o73-il-xjs"/>
+                    <connections>
+                        <outlet property="clientNameLabel" destination="eDe-eT-jL8" id="z8G-XT-enm"/>
+                        <outlet property="fechaLabel" destination="TMd-yS-a9I" id="Tsz-gV-lin"/>
+                        <outlet property="monedaLabel" destination="VuG-CG-szX" id="eLD-6k-2dH"/>
+                        <outlet property="monedaMontoLabel" destination="2TG-Qj-C0f" id="QnS-Cv-PQn"/>
+                        <outlet property="montoPagarLabel" destination="H79-uU-5Va" id="JpL-hr-Wuq"/>
+                        <outlet property="profileImage" destination="BTp-4m-wr4" id="sNv-mm-Ylb"/>
+                        <outlet property="saldoTotalLabel" destination="aoH-Uz-CaI" id="z3F-Ud-WOG"/>
+                        <outlet property="statusImage" destination="ggQ-pG-slW" id="1CC-c0-Sg6"/>
+                        <outlet property="statusLabel" destination="BVm-0w-feC" id="iVE-xe-LPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL7-nc-mWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-838.46153846153845" y="1198.5781990521327"/>
+        </scene>
+        <!--Request View Controller-->
+        <scene sceneID="FNX-bn-4hF">
+            <objects>
+                <viewController id="8GT-Pq-LU8" customClass="RequestViewController" customModule="Adelanto_de_Nomina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uM2-bi-mw4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lu-Xe-BxA">
+                                <rect key="frame" x="0.0" y="86.666666666666686" width="390" height="674.33333333333326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-Bn-G9i">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1250"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCE-l3-H2g">
+                                                <rect key="frame" x="40" y="936" width="310" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <state key="normal" title="BUTTON">
+                                                    <color key="titleColor" name="ColorBack"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="FINISH"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="AcceptButtonAction:" destination="8GT-Pq-LU8" eventType="touchUpInside" id="uOw-7e-boJ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ips-2A-vqb">
+                                                <rect key="frame" x="15" y="0.0" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="NAMES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="61G-cM-Kmx">
+                                                <rect key="frame" x="15" y="37" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JOSE ANTONIO" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5U3-Cj-GTG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="FwD-P3-Nmd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-NG-GBp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Pfx-NG-GBp" firstAttribute="leading" secondItem="61G-cM-Kmx" secondAttribute="leading" id="MZ9-Fe-7l1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pfx-NG-GBp" secondAttribute="trailing" id="ouY-Nt-iWT"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-6b-X4l">
+                                                <rect key="frame" x="15" y="85.999999999999986" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="LAST_NAME"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-mD-dBx">
+                                                <rect key="frame" x="15" y="123" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PEREZ DURAN" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mez-mG-PJc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="LIi-b1-ALO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08D-va-fsx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="08D-va-fsx" secondAttribute="trailing" id="3w9-bC-luN"/>
+                                                    <constraint firstItem="08D-va-fsx" firstAttribute="leading" secondItem="Dco-mD-dBx" secondAttribute="leading" id="5ih-Ty-GIX"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bds-Ze-qxV">
+                                                <rect key="frame" x="15" y="172" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="EMAIL"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LSd-ct-KQh">
+                                                <rect key="frame" x="15" y="209" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JOSEPEREZ@GMAIL.COM" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2m-fP-gXw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="u8n-9p-gBG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="name"/>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENb-GS-5rk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ENb-GS-5rk" secondAttribute="trailing" id="AaO-UG-ZeC"/>
+                                                    <constraint firstItem="ENb-GS-5rk" firstAttribute="leading" secondItem="LSd-ct-KQh" secondAttribute="leading" id="lk0-DX-zHo"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACw-gr-oGB">
+                                                <rect key="frame" x="15" y="258" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="PHONE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntN-yL-3Ja">
+                                                <rect key="frame" x="15" y="344" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="SEX"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-WO-vbU">
+                                                <rect key="frame" x="15" y="295" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5519394801" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXi-8e-P3m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="bg4-zI-7tA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="name"/>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-Ly-0fZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="CBI-Ly-0fZ" firstAttribute="leading" secondItem="Bhv-WO-vbU" secondAttribute="leading" id="Kpa-lW-6Ta"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CBI-Ly-0fZ" secondAttribute="trailing" id="OiP-7j-4vH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-4s-0Yc">
+                                                <rect key="frame" x="15" y="413" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="BIRTH"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpW-I2-Ec3">
+                                                <rect key="frame" x="40" y="376" width="18" height="22"/>
+                                                <state key="normal" image="point"/>
+                                                <connections>
+                                                    <action selector="maleAction:" destination="8GT-Pq-LU8" eventType="touchUpInside" id="0lH-IQ-uVQ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGK-i7-1KA">
+                                                <rect key="frame" x="66" y="376" width="48.333333333333343" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="MALE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oT-YD-bfF">
+                                                <rect key="frame" x="136.66666666666666" y="375.33333333333331" width="18" height="22"/>
+                                                <state key="normal" image="point"/>
+                                                <connections>
+                                                    <action selector="fameAcction:" destination="8GT-Pq-LU8" eventType="touchUpInside" id="ECR-VB-Dhw"/>
+                                                </connections>
+                                            </button>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointBlack" translatesAutoresizingMaskIntoConstraints="NO" id="cMt-u7-oRb">
+                                                <rect key="frame" x="132.66666666666666" y="376.33333333333331" width="26" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="bQv-h6-RRp"/>
+                                                    <constraint firstAttribute="height" constant="19" id="g84-Ww-fC2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-Pu-mn9">
+                                                <rect key="frame" x="162.66666666666666" y="375.33333333333331" width="48.333333333333343" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="FEMININE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Jqq-MH-IKr">
+                                                <rect key="frame" x="36" y="378.33333333333331" width="26" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17" id="k0L-mS-8YD"/>
+                                                    <constraint firstAttribute="width" constant="26" id="ybh-S8-46o"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-sV-koe">
+                                                <rect key="frame" x="15" y="494.99999999999994" width="360" height="22.000000000000057"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="STATE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t32-DG-wTw">
+                                                <rect key="frame" x="15" y="575" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="DELEGATION"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohs-5C-4IG">
+                                                <rect key="frame" x="15" y="731" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="SUBURB"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBq-Fx-pO2">
+                                                <rect key="frame" x="15" y="811" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="STREET"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SmM-r7-rGM">
+                                                <rect key="frame" x="15" y="843" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GOBERNADOR AGUSTIN VICENTE EQUIHUA 56" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6O1-dd-eAB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="kpS-hc-xri"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSr-e2-OtB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="uSr-e2-OtB" firstAttribute="leading" secondItem="SmM-r7-rGM" secondAttribute="leading" id="te9-wK-RMl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uSr-e2-OtB" secondAttribute="trailing" id="ypg-dv-WeJ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="p7R-eN-Zhx">
+                                                <rect key="frame" x="15" y="887" width="360" height="31"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AS5-XH-xIv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8Y-P8-e9U">
+                                                                <rect key="frame" x="0.0" y="0.0" width="301" height="31"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FrM-Vc-tbV">
+                                                                <rect key="frame" x="311" y="0.0" width="51" height="31"/>
+                                                                <color key="onTintColor" name="MainColor"/>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-RG-VUd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-g2-mpR">
+                                                <rect key="frame" x="15" y="655" width="360" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="POSTAL"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="awh-CN-L1N">
+                                                <rect key="frame" x="15" y="687" width="360" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-tz-c1z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="zFb-Yl-hxX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" textContentType="tel"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="ADD_POSTAL"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="codePostalTextField:" destination="8GT-Pq-LU8" eventType="editingChanged" id="xxC-cV-Bbi"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoY-u2-T3K">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="BoY-u2-T3K" secondAttribute="trailing" id="TrE-jd-bdi"/>
+                                                    <constraint firstItem="BoY-u2-T3K" firstAttribute="leading" secondItem="awh-CN-L1N" secondAttribute="leading" id="soi-1M-CZm"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="jsG-bM-6XR">
+                                                <rect key="frame" x="15" y="527" width="360" height="38"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-59-Cep">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="38"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-su-POH">
+                                                                <rect key="frame" x="0.0" y="5" width="360" height="28"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-h1-gOQ" customClass="PickerViewTextField" customModule="Adelanto_de_Nomina" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="ADD_STATE"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <viewLayoutGuide key="safeArea" id="4ri-f4-c8F"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="fpW-su-POH" firstAttribute="top" secondItem="tLA-59-Cep" secondAttribute="top" constant="5" id="0F4-Zm-TQM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fpW-su-POH" secondAttribute="bottom" constant="5" id="8pP-HU-YYT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fpW-su-POH" secondAttribute="trailing" id="IUq-7z-2Ti"/>
+                                                            <constraint firstAttribute="height" constant="38" id="Wcc-gP-xxT"/>
+                                                            <constraint firstItem="fpW-su-POH" firstAttribute="leading" secondItem="tLA-59-Cep" secondAttribute="leading" id="nbm-gK-hFp"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-mE-4YE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="3Jv-H1-cYX">
+                                                <rect key="frame" x="15" y="607" width="360" height="38"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p42-ub-a62">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="38"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svr-KG-UuQ">
+                                                                <rect key="frame" x="0.0" y="5" width="360" height="28"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hld-Ox-0eJ" customClass="PickerViewTextField" customModule="Adelanto_de_Nomina" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="ADD_DELEGATION"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <viewLayoutGuide key="safeArea" id="psY-v3-FLr"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="svr-KG-UuQ" secondAttribute="bottom" constant="5" id="0Gc-lD-Snq"/>
+                                                            <constraint firstItem="svr-KG-UuQ" firstAttribute="top" secondItem="p42-ub-a62" secondAttribute="top" constant="5" id="5gn-Hb-tT7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="svr-KG-UuQ" secondAttribute="trailing" id="L1K-eh-hFW"/>
+                                                            <constraint firstAttribute="height" constant="38" id="Opn-ki-G65"/>
+                                                            <constraint firstItem="svr-KG-UuQ" firstAttribute="leading" secondItem="p42-ub-a62" secondAttribute="leading" id="Y5e-GH-Re3"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSO-vI-Q1d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="FPe-Go-Hdk">
+                                                <rect key="frame" x="15" y="763" width="360" height="38"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5D-4b-prt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="38"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-Ya-yIO">
+                                                                <rect key="frame" x="0.0" y="5" width="360" height="28"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMv-mA-eYU" customClass="PickerViewTextField" customModule="Adelanto_de_Nomina" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="ADD_SUBURB"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <viewLayoutGuide key="safeArea" id="0iz-SC-D5V"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="3bR-Ya-yIO" firstAttribute="top" secondItem="K5D-4b-prt" secondAttribute="top" constant="5" id="OxT-ET-gay"/>
+                                                            <constraint firstAttribute="height" constant="38" id="ekN-EA-Gkd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3bR-Ya-yIO" secondAttribute="trailing" id="h0g-xv-kx5"/>
+                                                            <constraint firstItem="3bR-Ya-yIO" firstAttribute="leading" secondItem="K5D-4b-prt" secondAttribute="leading" id="jss-1o-QVH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="3bR-Ya-yIO" secondAttribute="bottom" constant="5" id="n5m-gw-AFQ"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-Z3-oNA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-Uq-3If">
+                                                <rect key="frame" x="15" y="444.99999999999994" width="360" height="40"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2EU-gX-sEO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUL-Ke-NUF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="329.33333333333331" height="40"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 / 00 / 0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-6d-kVj" customClass="DatePickerTextField" customModule="Adelanto_de_Nomina" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="329.33333333333331" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="localePlaceholderKey" value="DD/MM/YYYY"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="wHJ-6d-kVj" secondAttribute="trailing" id="8PP-p6-8h5"/>
+                                                                    <constraint firstItem="wHJ-6d-kVj" firstAttribute="leading" secondItem="lUL-Ke-NUF" secondAttribute="leading" id="SoN-pK-13Y"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="wHJ-6d-kVj" secondAttribute="bottom" id="bgo-vl-DM7"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="jxb-j4-fmO"/>
+                                                                    <constraint firstItem="wHJ-6d-kVj" firstAttribute="top" secondItem="lUL-Ke-NUF" secondAttribute="top" id="yWL-5s-6ne"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fnr-zd-UAv">
+                                                                <rect key="frame" x="339.33333333333331" y="1.6666666666666643" width="20.666666666666686" height="37"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-Dt-cdo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="OBLIGA"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FPe-Go-Hdk" secondAttribute="trailing" constant="15" id="1rj-zQ-NFf"/>
+                                            <constraint firstItem="WCE-l3-H2g" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="40" id="2pA-qW-FNr"/>
+                                            <constraint firstItem="Dco-mD-dBx" firstAttribute="top" secondItem="ayz-6b-X4l" secondAttribute="bottom" constant="15" id="2xj-Yk-WnB"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Jv-H1-cYX" secondAttribute="trailing" constant="15" id="3ki-vy-eFn"/>
+                                            <constraint firstItem="jsG-bM-6XR" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="52I-vl-xW9"/>
+                                            <constraint firstItem="cMt-u7-oRb" firstAttribute="leading" secondItem="mGK-i7-1KA" secondAttribute="trailing" constant="18.329999999999998" id="54n-aJ-smg"/>
+                                            <constraint firstItem="kFT-Pu-mn9" firstAttribute="leading" secondItem="5oT-YD-bfF" secondAttribute="trailing" constant="8" symbolic="YES" id="56U-Tc-x6i"/>
+                                            <constraint firstAttribute="trailing" secondItem="ntN-yL-3Ja" secondAttribute="trailing" constant="15" id="5kE-X8-JnP"/>
+                                            <constraint firstItem="gZX-g2-mpR" firstAttribute="top" secondItem="3Jv-H1-cYX" secondAttribute="bottom" constant="10" id="5zL-BI-aR8"/>
+                                            <constraint firstItem="kFT-Pu-mn9" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="9.3300000000000001" id="6e2-FO-icI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ACw-gr-oGB" secondAttribute="trailing" constant="15" id="6fp-D2-3rg"/>
+                                            <constraint firstItem="5oT-YD-bfF" firstAttribute="leading" secondItem="mGK-i7-1KA" secondAttribute="trailing" constant="22.329999999999998" id="7Dp-ny-OsY"/>
+                                            <constraint firstItem="ntN-yL-3Ja" firstAttribute="top" secondItem="Bhv-WO-vbU" secondAttribute="bottom" constant="15" id="90E-DL-oDH"/>
+                                            <constraint firstAttribute="trailing" secondItem="LSd-ct-KQh" secondAttribute="trailing" constant="15" id="9Sf-oM-ITn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bhv-WO-vbU" secondAttribute="trailing" constant="15" id="9uW-Kw-rcp"/>
+                                            <constraint firstItem="61G-cM-Kmx" firstAttribute="top" secondItem="ips-2A-vqb" secondAttribute="bottom" constant="15" id="AFO-sW-P1f"/>
+                                            <constraint firstItem="cMt-u7-oRb" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="10.33" id="AKx-Dh-DOp"/>
+                                            <constraint firstItem="ACw-gr-oGB" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="DAt-cO-O2g"/>
+                                            <constraint firstAttribute="trailing" secondItem="ayz-6b-X4l" secondAttribute="trailing" constant="15" id="Djs-RR-t8n"/>
+                                            <constraint firstItem="cXK-Uq-3If" firstAttribute="top" secondItem="6kA-4s-0Yc" secondAttribute="bottom" constant="10" id="Fe0-8u-diX"/>
+                                            <constraint firstItem="ACw-gr-oGB" firstAttribute="top" secondItem="LSd-ct-KQh" secondAttribute="bottom" constant="15" id="Izk-Pw-nae"/>
+                                            <constraint firstAttribute="trailing" secondItem="p7R-eN-Zhx" secondAttribute="trailing" constant="15" id="JCh-EW-fhy"/>
+                                            <constraint firstItem="Bhv-WO-vbU" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="Jbq-US-VZf"/>
+                                            <constraint firstItem="jsG-bM-6XR" firstAttribute="top" secondItem="qt0-sV-koe" secondAttribute="bottom" constant="10" id="Jo5-bl-1ky"/>
+                                            <constraint firstAttribute="trailing" secondItem="jsG-bM-6XR" secondAttribute="trailing" constant="15" id="K6D-2l-KXa"/>
+                                            <constraint firstItem="ntN-yL-3Ja" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="L0R-Au-Gxy"/>
+                                            <constraint firstAttribute="trailing" secondItem="cXK-Uq-3If" secondAttribute="trailing" constant="15" id="MNj-Vd-1fX"/>
+                                            <constraint firstItem="awh-CN-L1N" firstAttribute="top" secondItem="gZX-g2-mpR" secondAttribute="bottom" constant="10" id="NKr-CZ-Ub5"/>
+                                            <constraint firstItem="ayz-6b-X4l" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="QK1-nA-G37"/>
+                                            <constraint firstItem="Jqq-MH-IKr" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="12.33" id="QKP-qJ-nii"/>
+                                            <constraint firstAttribute="trailing" secondItem="qt0-sV-koe" secondAttribute="trailing" constant="15" id="QfT-4T-QWT"/>
+                                            <constraint firstItem="eBq-Fx-pO2" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="Qhf-RH-L8j"/>
+                                            <constraint firstItem="WCE-l3-H2g" firstAttribute="top" secondItem="p7R-eN-Zhx" secondAttribute="bottom" constant="18" id="Qq2-Be-dqa"/>
+                                            <constraint firstItem="SmM-r7-rGM" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="SHK-ki-vBl"/>
+                                            <constraint firstItem="gZX-g2-mpR" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="Sfs-Za-ntL"/>
+                                            <constraint firstItem="jpW-I2-Ec3" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="40" id="TdB-LM-gUp"/>
+                                            <constraint firstItem="Bhv-WO-vbU" firstAttribute="top" secondItem="ACw-gr-oGB" secondAttribute="bottom" constant="15" id="UrF-YD-zFb"/>
+                                            <constraint firstItem="6kA-4s-0Yc" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="VBz-El-r1j"/>
+                                            <constraint firstItem="jpW-I2-Ec3" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="10" id="Wto-T9-XkJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="eBq-Fx-pO2" secondAttribute="trailing" constant="15" id="X9a-OO-lAY"/>
+                                            <constraint firstAttribute="trailing" secondItem="awh-CN-L1N" secondAttribute="trailing" constant="15" id="Xn1-kp-WSm"/>
+                                            <constraint firstItem="FPe-Go-Hdk" firstAttribute="top" secondItem="ohs-5C-4IG" secondAttribute="bottom" constant="10" id="YBZ-Pr-bPn"/>
+                                            <constraint firstItem="bds-Ze-qxV" firstAttribute="top" secondItem="Dco-mD-dBx" secondAttribute="bottom" constant="15" id="Z0Q-qO-xyc"/>
+                                            <constraint firstItem="t32-DG-wTw" firstAttribute="top" secondItem="jsG-bM-6XR" secondAttribute="bottom" constant="10" id="ZRB-M2-ztN"/>
+                                            <constraint firstItem="t32-DG-wTw" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="ZfS-lP-AJE"/>
+                                            <constraint firstAttribute="trailing" secondItem="SmM-r7-rGM" secondAttribute="trailing" constant="15" id="ZgL-QS-cyK"/>
+                                            <constraint firstItem="3Jv-H1-cYX" firstAttribute="top" secondItem="t32-DG-wTw" secondAttribute="bottom" constant="10" id="aJL-Gk-Z3Y"/>
+                                            <constraint firstItem="ohs-5C-4IG" firstAttribute="top" secondItem="awh-CN-L1N" secondAttribute="bottom" constant="10" id="aOs-YM-Nnv"/>
+                                            <constraint firstItem="FPe-Go-Hdk" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="aUV-0o-yWc"/>
+                                            <constraint firstAttribute="trailing" secondItem="6kA-4s-0Yc" secondAttribute="trailing" constant="15" id="apk-ZO-eFY"/>
+                                            <constraint firstAttribute="trailing" secondItem="t32-DG-wTw" secondAttribute="trailing" constant="15" id="bEN-uB-n0L"/>
+                                            <constraint firstItem="qt0-sV-koe" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="bxs-sg-sfk"/>
+                                            <constraint firstAttribute="trailing" secondItem="WCE-l3-H2g" secondAttribute="trailing" constant="40" id="dTe-jE-jLt"/>
+                                            <constraint firstItem="6kA-4s-0Yc" firstAttribute="top" secondItem="jpW-I2-Ec3" secondAttribute="bottom" constant="15" id="dyR-yT-XwC"/>
+                                            <constraint firstItem="mGK-i7-1KA" firstAttribute="leading" secondItem="jpW-I2-Ec3" secondAttribute="trailing" constant="8" symbolic="YES" id="fAu-mB-4Ci"/>
+                                            <constraint firstAttribute="trailing" secondItem="bds-Ze-qxV" secondAttribute="trailing" constant="15" id="fkd-fV-mzC"/>
+                                            <constraint firstAttribute="trailing" secondItem="ips-2A-vqb" secondAttribute="trailing" constant="15" id="hpz-mh-ENf"/>
+                                            <constraint firstAttribute="trailing" secondItem="61G-cM-Kmx" secondAttribute="trailing" constant="15" id="iKC-kn-ZMJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dco-mD-dBx" secondAttribute="trailing" constant="15" id="iTB-aw-Fse"/>
+                                            <constraint firstAttribute="height" constant="1250" id="ibU-qS-wbM"/>
+                                            <constraint firstAttribute="trailing" secondItem="ohs-5C-4IG" secondAttribute="trailing" constant="15" id="ivU-Nw-ZkO"/>
+                                            <constraint firstItem="eBq-Fx-pO2" firstAttribute="top" secondItem="FPe-Go-Hdk" secondAttribute="bottom" constant="10" id="keU-iN-ciZ"/>
+                                            <constraint firstItem="ips-2A-vqb" firstAttribute="top" secondItem="TrB-Bn-G9i" secondAttribute="top" id="n1x-j9-gVp"/>
+                                            <constraint firstItem="p7R-eN-Zhx" firstAttribute="top" secondItem="SmM-r7-rGM" secondAttribute="bottom" constant="10" id="nAd-P1-FI1"/>
+                                            <constraint firstItem="cXK-Uq-3If" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="o8N-oh-gsK"/>
+                                            <constraint firstItem="Jqq-MH-IKr" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="36" id="rDG-DC-sna"/>
+                                            <constraint firstItem="mGK-i7-1KA" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="10" id="rhy-iY-h2a"/>
+                                            <constraint firstItem="Dco-mD-dBx" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="sZt-1z-Yj3"/>
+                                            <constraint firstItem="ohs-5C-4IG" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="t5u-8L-hIO"/>
+                                            <constraint firstItem="qt0-sV-koe" firstAttribute="top" secondItem="cXK-Uq-3If" secondAttribute="bottom" constant="10" id="tR4-KO-zAy"/>
+                                            <constraint firstItem="3Jv-H1-cYX" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="ucF-k9-CeN"/>
+                                            <constraint firstItem="bds-Ze-qxV" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="wa6-JX-1Ue"/>
+                                            <constraint firstItem="p7R-eN-Zhx" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="x63-io-Icd"/>
+                                            <constraint firstItem="LSd-ct-KQh" firstAttribute="top" secondItem="bds-Ze-qxV" secondAttribute="bottom" constant="15" id="xAA-MQ-ceF"/>
+                                            <constraint firstItem="ips-2A-vqb" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="xIi-78-aXb"/>
+                                            <constraint firstItem="5oT-YD-bfF" firstAttribute="top" secondItem="ntN-yL-3Ja" secondAttribute="bottom" constant="9.3300000000000001" id="xPb-op-zj5"/>
+                                            <constraint firstAttribute="trailing" secondItem="gZX-g2-mpR" secondAttribute="trailing" constant="15" id="xkR-rv-EI5"/>
+                                            <constraint firstItem="awh-CN-L1N" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="xuW-wx-zm6"/>
+                                            <constraint firstItem="SmM-r7-rGM" firstAttribute="top" secondItem="eBq-Fx-pO2" secondAttribute="bottom" constant="10" id="yJK-6P-eiV"/>
+                                            <constraint firstItem="61G-cM-Kmx" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="yR1-T0-Yu2"/>
+                                            <constraint firstItem="ayz-6b-X4l" firstAttribute="top" secondItem="61G-cM-Kmx" secondAttribute="bottom" constant="15" id="yfT-B9-g2c"/>
+                                            <constraint firstItem="LSd-ct-KQh" firstAttribute="leading" secondItem="TrB-Bn-G9i" secondAttribute="leading" constant="15" id="zQ5-pO-fcI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TrB-Bn-G9i" secondAttribute="trailing" id="OX3-Ba-MfO"/>
+                                    <constraint firstItem="TrB-Bn-G9i" firstAttribute="width" secondItem="8lu-Xe-BxA" secondAttribute="width" id="QhO-mN-es5"/>
+                                    <constraint firstItem="TrB-Bn-G9i" firstAttribute="top" secondItem="8lu-Xe-BxA" secondAttribute="top" id="j0I-sS-dhy"/>
+                                    <constraint firstItem="TrB-Bn-G9i" firstAttribute="leading" secondItem="8lu-Xe-BxA" secondAttribute="leading" id="qkm-s9-vm6"/>
+                                    <constraint firstAttribute="bottom" secondItem="TrB-Bn-G9i" secondAttribute="bottom" id="yQR-rm-IEO"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csp-zg-FYD">
+                                <rect key="frame" x="20" y="44" width="350" height="32.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="REQUEST"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T1o-Lh-jRv"/>
+                        <color key="backgroundColor" name="ColorBack"/>
+                        <constraints>
+                            <constraint firstItem="8lu-Xe-BxA" firstAttribute="trailing" secondItem="T1o-Lh-jRv" secondAttribute="trailing" id="674-P6-UHj"/>
+                            <constraint firstItem="8lu-Xe-BxA" firstAttribute="bottom" secondItem="T1o-Lh-jRv" secondAttribute="bottom" id="89B-ns-aJX"/>
+                            <constraint firstItem="T1o-Lh-jRv" firstAttribute="trailing" secondItem="csp-zg-FYD" secondAttribute="trailing" constant="20" id="Dh5-md-aaa"/>
+                            <constraint firstItem="csp-zg-FYD" firstAttribute="top" secondItem="T1o-Lh-jRv" secondAttribute="top" id="L2Q-qE-6DI"/>
+                            <constraint firstItem="csp-zg-FYD" firstAttribute="leading" secondItem="T1o-Lh-jRv" secondAttribute="leading" constant="20" id="RRo-Wt-EKb"/>
+                            <constraint firstItem="8lu-Xe-BxA" firstAttribute="leading" secondItem="T1o-Lh-jRv" secondAttribute="leading" id="h7n-Xq-lvk"/>
+                            <constraint firstItem="8lu-Xe-BxA" firstAttribute="top" secondItem="csp-zg-FYD" secondAttribute="bottom" constant="10" id="sYV-SK-mP6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zQB-ka-hMl"/>
+                    <connections>
+                        <outlet property="codePostalTextField" destination="RdR-tz-c1z" id="zcr-gU-LXK"/>
+                        <outlet property="datePicker" destination="wHJ-6d-kVj" id="n9y-vo-2ic"/>
+                        <outlet property="dateRequed" destination="6LA-Dt-cdo" id="uZb-Wb-QhD"/>
+                        <outlet property="delegationPicker" destination="Hld-Ox-0eJ" id="Jbf-F9-ubh"/>
+                        <outlet property="delegationRequed" destination="oSO-vI-Q1d" id="eq7-Xx-iiS"/>
+                        <outlet property="emailRequed" destination="ENb-GS-5rk" id="gPU-GA-GDq"/>
+                        <outlet property="emailTextField" destination="P2m-fP-gXw" id="D4Z-Yn-7G9"/>
+                        <outlet property="femeButtonOutlet" destination="5oT-YD-bfF" id="n5t-Hy-UzV"/>
+                        <outlet property="lastNameRequed" destination="08D-va-fsx" id="enR-3I-Tbu"/>
+                        <outlet property="lastNameTextField" destination="mez-mG-PJc" id="7Co-JB-Kvu"/>
+                        <outlet property="maleButtonOutlet" destination="jpW-I2-Ec3" id="VOP-Oe-UCx"/>
+                        <outlet property="malePointOutlet" destination="Jqq-MH-IKr" id="4OQ-es-kR4"/>
+                        <outlet property="nameRequed" destination="Pfx-NG-GBp" id="wTE-wv-4QY"/>
+                        <outlet property="nameTextField" destination="5U3-Cj-GTG" id="0XY-R3-6H4"/>
+                        <outlet property="phoneRequed" destination="CBI-Ly-0fZ" id="2XL-KI-xsd"/>
+                        <outlet property="phoneTextField" destination="KXi-8e-P3m" id="JKI-r2-l4j"/>
+                        <outlet property="pointFameOutlet" destination="cMt-u7-oRb" id="95H-Tj-TjO"/>
+                        <outlet property="postalCodeRequed" destination="BoY-u2-T3K" id="tu2-ag-580"/>
+                        <outlet property="privaLabel" destination="K8Y-P8-e9U" id="Kml-dh-l2z"/>
+                        <outlet property="statePicker" destination="nCj-h1-gOQ" id="enc-Vn-3LM"/>
+                        <outlet property="stateRequed" destination="c7W-mE-4YE" id="8fn-gq-DWa"/>
+                        <outlet property="streetRequired" destination="uSr-e2-OtB" id="FQ1-9y-cq2"/>
+                        <outlet property="streetTextField" destination="6O1-dd-eAB" id="PJy-2j-iPw"/>
+                        <outlet property="suburbPicker" destination="FMv-mA-eYU" id="TYU-k8-hah"/>
+                        <outlet property="suburdRequed" destination="ReA-Z3-oNA" id="kzn-HX-c2Z"/>
+                        <outlet property="switgRequest" destination="FrM-Vc-tbV" id="Nc8-Ss-aZG"/>
+                        <outlet property="swithRequerid" destination="kh5-RG-VUd" id="Arm-Sb-t6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ub-fT-LmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="1198.5781990521327"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="batman" width="213.33332824707031" height="292.66665649414062"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="green" width="16" height="16"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="logout" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="point" width="18" height="18"/>
+        <image name="pointBlack" width="16.666666030883789" height="16.666666030883789"/>
+        <namedColor name="ColorBack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.40799999237060547" green="0.67500001192092896" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

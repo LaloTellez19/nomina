@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFAA9786231D081AA0D5CD00 /* Pods_Adelanto_de_Nomina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8009B84829AAEADFA2A29C66 /* Pods_Adelanto_de_Nomina.framework */; };
+		D014F76C267D025100C103B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014F76B267D025100C103B6 /* AppDelegate.swift */; };
+		D014F770267D025100C103B6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014F76F267D025100C103B6 /* SplashViewController.swift */; };
+		D014F773267D025100C103B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D014F771267D025100C103B6 /* Main.storyboard */; };
+		D014F775267D025200C103B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D014F774267D025200C103B6 /* Assets.xcassets */; };
+		D014F778267D025200C103B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D014F776267D025200C103B6 /* LaunchScreen.storyboard */; };
+		D014F780267D06A000C103B6 /* nomina.json in Resources */ = {isa = PBXBuildFile; fileRef = D014F77F267D06A000C103B6 /* nomina.json */; };
+		D014F782267D0E4200C103B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014F781267D0E4200C103B6 /* LoginViewController.swift */; };
+		D015027B2680F91C006DAF99 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015027A2680F91C006DAF99 /* CreateAccountViewController.swift */; };
+		D015027D2680F92E006DAF99 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D015027C2680F92E006DAF99 /* CreateAccount.storyboard */; };
+		D015028726811DFE006DAF99 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D015028626811DFE006DAF99 /* Home.storyboard */; };
+		D015028926812F70006DAF99 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015028826812F70006DAF99 /* HomeTabViewController.swift */; };
+		D015028B26824369006DAF99 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015028A26824369006DAF99 /* HistoryViewController.swift */; };
+		D015028D2682437D006DAF99 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015028C2682437D006DAF99 /* RequestViewController.swift */; };
+		D015028F26824610006DAF99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015028E26824610006DAF99 /* HomeViewController.swift */; };
+		D015029626826A8A006DAF99 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015029426826A89006DAF99 /* StoryTableViewCell.swift */; };
+		D015029726826A8A006DAF99 /* Payment.xib in Resources */ = {isa = PBXBuildFile; fileRef = D015029526826A89006DAF99 /* Payment.xib */; };
+		D029CE44268B979700971102 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D029CE46268B979700971102 /* Localizable.strings */; };
+		D029CE4B268B9B6F00971102 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029CE4A268B9B6F00971102 /* Extension.swift */; };
+		D03186F6268E543800322D72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D03186F4268E543800322D72 /* GoogleService-Info.plist */; };
+		D03186F7268E543800322D72 /* payments.json in Resources */ = {isa = PBXBuildFile; fileRef = D03186F5268E543800322D72 /* payments.json */; };
+		D03186F9268E567D00322D72 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03186F8268E567D00322D72 /* Login.storyboard */; };
+		D05B1924268D268B00D6872A /* DetailsPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B1923268D268B00D6872A /* DetailsPaymentViewController.swift */; };
+		D05B1928268D2B7900D6872A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05B1927268D2B7900D6872A /* Detail.storyboard */; };
+		D05B192A268D3A3000D6872A /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B1929268D3A3000D6872A /* DatePickerTextField.swift */; };
+		D05B192C268D3AA200D6872A /* PickerViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B192B268D3AA200D6872A /* PickerViewTextField.swift */; };
+		D07CB3AD268A2452009DA288 /* Accounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D07CB3AB268A2452009DA288 /* Accounts.xcdatamodeld */; };
+		D0E8D9D22683CF2100650ACA /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8D9D12683CF2100650ACA /* PaymentModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12D2C3D6685DED25B6644073 /* Pods-Adelanto de Nomina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adelanto de Nomina.release.xcconfig"; path = "Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina.release.xcconfig"; sourceTree = "<group>"; };
+		338DA13C274AC6F87FEE7ECE /* Pods-Adelanto de Nomina.pro release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adelanto de Nomina.pro release.xcconfig"; path = "Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina.pro release.xcconfig"; sourceTree = "<group>"; };
+		701EA8569F374A84CE3109B3 /* Pods-Adelanto de Nomina.pro debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adelanto de Nomina.pro debug.xcconfig"; path = "Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina.pro debug.xcconfig"; sourceTree = "<group>"; };
+		8009B84829AAEADFA2A29C66 /* Pods_Adelanto_de_Nomina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adelanto_de_Nomina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D971DB5563435E6DE1C9162 /* Pods-Adelanto de Nomina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adelanto de Nomina.debug.xcconfig"; path = "Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina.debug.xcconfig"; sourceTree = "<group>"; };
+		D014F768267D025100C103B6 /* Adelanto de Nomina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adelanto de Nomina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D014F76B267D025100C103B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D014F76F267D025100C103B6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D014F772267D025100C103B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D014F774267D025200C103B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D014F777267D025200C103B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D014F779267D025200C103B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D014F77F267D06A000C103B6 /* nomina.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nomina.json; sourceTree = "<group>"; };
+		D014F781267D0E4200C103B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D015027A2680F91C006DAF99 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D015027C2680F92E006DAF99 /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
+		D015028626811DFE006DAF99 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D015028826812F70006DAF99 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		D015028A26824369006DAF99 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D015028C2682437D006DAF99 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		D015028E26824610006DAF99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D015029426826A89006DAF99 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		D015029526826A89006DAF99 /* Payment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Payment.xib; sourceTree = "<group>"; };
+		D029CE45268B979700971102 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D029CE4A268B9B6F00971102 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D029CE4C268BAAF100971102 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		D029CE4D268BAAF100971102 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D029CE4F268BAAF200971102 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D03186F4268E543800322D72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D03186F5268E543800322D72 /* payments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = payments.json; sourceTree = "<group>"; };
+		D03186F8268E567D00322D72 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D05B1923268D268B00D6872A /* DetailsPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPaymentViewController.swift; sourceTree = "<group>"; };
+		D05B1927268D2B7900D6872A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		D05B1929268D3A3000D6872A /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
+		D05B192B268D3AA200D6872A /* PickerViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextField.swift; sourceTree = "<group>"; };
+		D07CB3AC268A2452009DA288 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D0E8D9D12683CF2100650ACA /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D014F765267D025100C103B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFAA9786231D081AA0D5CD00 /* Pods_Adelanto_de_Nomina.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C12AD05787AE4D3C5D13AF9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8009B84829AAEADFA2A29C66 /* Pods_Adelanto_de_Nomina.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D014F75F267D025100C103B6 = {
+			isa = PBXGroup;
+			children = (
+				D014F76A267D025100C103B6 /* Adelanto de Nomina */,
+				D014F769267D025100C103B6 /* Products */,
+				E185F796375AA13A5054D342 /* Pods */,
+				C12AD05787AE4D3C5D13AF9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D014F769267D025100C103B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D014F768267D025100C103B6 /* Adelanto de Nomina.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D014F76A267D025100C103B6 /* Adelanto de Nomina */ = {
+			isa = PBXGroup;
+			children = (
+				D03186F4268E543800322D72 /* GoogleService-Info.plist */,
+				D03186F5268E543800322D72 /* payments.json */,
+				D0E8D9D32683CF5B00650ACA /* Model */,
+				D015028026811DA2006DAF99 /* Splash */,
+				D015028326811DE6006DAF99 /* Menu Navegation  */,
+				D015028126811DD0006DAF99 /* Resources */,
+				D015027F26811D8E006DAF99 /* Login */,
+				D015027E26811D85006DAF99 /* Create Account */,
+				D014F779267D025200C103B6 /* Info.plist */,
+				D07CB3AB268A2452009DA288 /* Accounts.xcdatamodeld */,
+			);
+			path = "Adelanto de Nomina";
+			sourceTree = "<group>";
+		};
+		D015027E26811D85006DAF99 /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+				D015027A2680F91C006DAF99 /* CreateAccountViewController.swift */,
+				D015027C2680F92E006DAF99 /* CreateAccount.storyboard */,
+			);
+			path = "Create Account";
+			sourceTree = "<group>";
+		};
+		D015027F26811D8E006DAF99 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D03186F8268E567D00322D72 /* Login.storyboard */,
+				D014F781267D0E4200C103B6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D015028026811DA2006DAF99 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D014F77F267D06A000C103B6 /* nomina.json */,
+				D014F76B267D025100C103B6 /* AppDelegate.swift */,
+				D014F76F267D025100C103B6 /* SplashViewController.swift */,
+				D014F771267D025100C103B6 /* Main.storyboard */,
+				D014F776267D025200C103B6 /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D015028126811DD0006DAF99 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D05B192B268D3AA200D6872A /* PickerViewTextField.swift */,
+				D05B1929268D3A3000D6872A /* DatePickerTextField.swift */,
+				D029CE46268B979700971102 /* Localizable.strings */,
+				D029CE4A268B9B6F00971102 /* Extension.swift */,
+				D014F774267D025200C103B6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D015028326811DE6006DAF99 /* Menu Navegation  */ = {
+			isa = PBXGroup;
+			children = (
+				D015029826826A90006DAF99 /* Cell */,
+				D0E8D9D42683CFAE00650ACA /* Home */,
+				D0E8D9D52683CFC000650ACA /* History */,
+				D0E8D9D62683CFDF00650ACA /* Request */,
+			);
+			path = "Menu Navegation ";
+			sourceTree = "<group>";
+		};
+		D015029826826A90006DAF99 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D015029426826A89006DAF99 /* StoryTableViewCell.swift */,
+				D015029526826A89006DAF99 /* Payment.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D0E8D9D32683CF5B00650ACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0E8D9D12683CF2100650ACA /* PaymentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0E8D9D42683CFAE00650ACA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D015028E26824610006DAF99 /* HomeViewController.swift */,
+				D015028826812F70006DAF99 /* HomeTabViewController.swift */,
+				D015028626811DFE006DAF99 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D0E8D9D52683CFC000650ACA /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D015028A26824369006DAF99 /* HistoryViewController.swift */,
+				D05B1923268D268B00D6872A /* DetailsPaymentViewController.swift */,
+				D05B1927268D2B7900D6872A /* Detail.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D0E8D9D62683CFDF00650ACA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D015028C2682437D006DAF99 /* RequestViewController.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E185F796375AA13A5054D342 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D971DB5563435E6DE1C9162 /* Pods-Adelanto de Nomina.debug.xcconfig */,
+				12D2C3D6685DED25B6644073 /* Pods-Adelanto de Nomina.release.xcconfig */,
+				701EA8569F374A84CE3109B3 /* Pods-Adelanto de Nomina.pro debug.xcconfig */,
+				338DA13C274AC6F87FEE7ECE /* Pods-Adelanto de Nomina.pro release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D014F767267D025100C103B6 /* Adelanto de Nomina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D014F77C267D025200C103B6 /* Build configuration list for PBXNativeTarget "Adelanto de Nomina" */;
+			buildPhases = (
+				D052855E268E980A0094509E /* ShellScript */,
+				0753D083F8722DDAD9DE3842 /* [CP] Check Pods Manifest.lock */,
+				D014F764267D025100C103B6 /* Sources */,
+				D014F765267D025100C103B6 /* Frameworks */,
+				D014F766267D025100C103B6 /* Resources */,
+				93D40213A49913EAC91752FC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Adelanto de Nomina";
+			productName = "Adelanto de Nomina";
+			productReference = D014F768267D025100C103B6 /* Adelanto de Nomina.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D014F760267D025100C103B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D014F767267D025100C103B6 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = D014F763267D025100C103B6 /* Build configuration list for PBXProject "Adelanto de Nomina" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"es-419",
+			);
+			mainGroup = D014F75F267D025100C103B6;
+			productRefGroup = D014F769267D025100C103B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D014F767267D025100C103B6 /* Adelanto de Nomina */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D014F766267D025100C103B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D015028726811DFE006DAF99 /* Home.storyboard in Resources */,
+				D014F778267D025200C103B6 /* LaunchScreen.storyboard in Resources */,
+				D03186F7268E543800322D72 /* payments.json in Resources */,
+				D014F780267D06A000C103B6 /* nomina.json in Resources */,
+				D015029726826A8A006DAF99 /* Payment.xib in Resources */,
+				D05B1928268D2B7900D6872A /* Detail.storyboard in Resources */,
+				D029CE44268B979700971102 /* Localizable.strings in Resources */,
+				D015027D2680F92E006DAF99 /* CreateAccount.storyboard in Resources */,
+				D03186F9268E567D00322D72 /* Login.storyboard in Resources */,
+				D03186F6268E543800322D72 /* GoogleService-Info.plist in Resources */,
+				D014F775267D025200C103B6 /* Assets.xcassets in Resources */,
+				D014F773267D025100C103B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0753D083F8722DDAD9DE3842 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adelanto de Nomina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D40213A49913EAC91752FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adelanto de Nomina/Pods-Adelanto de Nomina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D052855E268E980A0094509E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D014F764267D025100C103B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D015027B2680F91C006DAF99 /* CreateAccountViewController.swift in Sources */,
+				D05B192C268D3AA200D6872A /* PickerViewTextField.swift in Sources */,
+				D0E8D9D22683CF2100650ACA /* PaymentModel.swift in Sources */,
+				D014F782267D0E4200C103B6 /* LoginViewController.swift in Sources */,
+				D014F770267D025100C103B6 /* SplashViewController.swift in Sources */,
+				D015028926812F70006DAF99 /* HomeTabViewController.swift in Sources */,
+				D05B192A268D3A3000D6872A /* DatePickerTextField.swift in Sources */,
+				D014F76C267D025100C103B6 /* AppDelegate.swift in Sources */,
+				D015028F26824610006DAF99 /* HomeViewController.swift in Sources */,
+				D05B1924268D268B00D6872A /* DetailsPaymentViewController.swift in Sources */,
+				D015028D2682437D006DAF99 /* RequestViewController.swift in Sources */,
+				D029CE4B268B9B6F00971102 /* Extension.swift in Sources */,
+				D015028B26824369006DAF99 /* HistoryViewController.swift in Sources */,
+				D015029626826A8A006DAF99 /* StoryTableViewCell.swift in Sources */,
+				D07CB3AD268A2452009DA288 /* Accounts.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D014F771267D025100C103B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D014F772267D025100C103B6 /* Base */,
+				D029CE4C268BAAF100971102 /* es-419 */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D014F776267D025200C103B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D014F777267D025200C103B6 /* Base */,
+				D029CE4D268BAAF100971102 /* es-419 */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D029CE46268B979700971102 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D029CE45268B979700971102 /* en */,
+				D029CE4F268BAAF200971102 /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D014F77A267D025200C103B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D014F77B267D025200C103B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D014F77D267D025200C103B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D971DB5563435E6DE1C9162 /* Pods-Adelanto de Nomina.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U69X8G25P;
+				INFOPLIST_FILE = "Adelanto de Nomina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomina.linko.Adelanto-de-Nomina";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOCAL";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D014F77E267D025200C103B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D2C3D6685DED25B6644073 /* Pods-Adelanto de Nomina.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U69X8G25P;
+				INFOPLIST_FILE = "Adelanto de Nomina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomina.linko.Adelanto-de-Nomina";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D049C831268D0F8900B9B485 /* PRO Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "PRO Debug";
+		};
+		D049C832268D0F8900B9B485 /* PRO Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 701EA8569F374A84CE3109B3 /* Pods-Adelanto de Nomina.pro debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U69X8G25P;
+				INFOPLIST_FILE = "Adelanto de Nomina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomina.linko.Adelanto-de-Nomina_PRO";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PRO";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PRO Debug";
+		};
+		D049C835268D0FBB00B9B485 /* PRO Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "PRO Release";
+		};
+		D049C836268D0FBB00B9B485 /* PRO Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338DA13C274AC6F87FEE7ECE /* Pods-Adelanto de Nomina.pro release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U69X8G25P;
+				INFOPLIST_FILE = "Adelanto de Nomina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomina.linko.Adelanto-de-Nomina_PRO";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PRO Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D014F763267D025100C103B6 /* Build configuration list for PBXProject "Adelanto de Nomina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D014F77A267D025200C103B6 /* Debug */,
+				D049C831268D0F8900B9B485 /* PRO Debug */,
+				D014F77B267D025200C103B6 /* Release */,
+				D049C835268D0FBB00B9B485 /* PRO Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D014F77C267D025200C103B6 /* Build configuration list for PBXNativeTarget "Adelanto de Nomina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D014F77D267D025200C103B6 /* Debug */,
+				D049C832268D0F8900B9B485 /* PRO Debug */,
+				D014F77E267D025200C103B6 /* Release */,
+				D049C836268D0FBB00B9B485 /* PRO Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D07CB3AB268A2452009DA288 /* Accounts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D07CB3AC268A2452009DA288 /* Model.xcdatamodel */,
+			);
+			currentVersion = D07CB3AC268A2452009DA288 /* Model.xcdatamodel */;
+			path = Accounts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D014F760267D025100C103B6 /* Project object */;
+}
